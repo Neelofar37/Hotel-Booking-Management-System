@@ -1,0 +1,74 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #071330;
+    padding: 0;
+    overflow: hidden;
+}
+.container{
+    width: 95%;
+    overflow: hidden;
+}
+.container .text{
+    position: relative;
+    color: #C3CEDA;
+    font-size: 65px;
+    font-weight: 100;
+    font-style: italic;
+    /* white-space: nowrap; */
+    /* height: 150px; */
+}
+.container .text.first-text{
+    font-style: normal;
+    color: #FFF;
+    font-weight: 500;
+}
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #071330;
+    border-left: 2px solid #C3CEDA;
+    animation: animate 4s steps(30) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+/* Change scrollbar track color (background) */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #ddd; /* Adjust the color as needed */
+}
+
+/* Change scrollbar handle color (thumb) */
+body::-webkit-scrollbar-thumb {
+    background-color: #131313; /* Set to black or grey color */
+}
+
+/* Optional: Change scrollbar arrow color */
+body::-webkit-scrollbar-button {
+    background-color: #101010; /* Set to black or grey color */
+}
+

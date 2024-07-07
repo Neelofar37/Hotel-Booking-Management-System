@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="typeContainer">
+        <span class="text first-text">Mystical Suites </span>
+        <span class="text sec-text">Timeless Elegance</span>
+    </div>
+
+
+    <script>
+        const text = document.querySelector(".sec-text");
+        const container = document.getElementById("typeContainer");
+        const textLoad = () => {
+            setTimeout(() => {
+                text.textContent = "Timeless Elegance.";
+            }, 0);
+            setTimeout(() => {
+                text.textContent = "Luxury Redefined, Every Stay.";
+            }, 4000);
+            setTimeout(() => {
+                text.textContent = "Comfort Meets Charm.";
+            }, 8000); //1s = 1000 milliseconds
+            const scrollThreshold = container.offsetHeight * 0.8; // Adjust as needed
+
+            if (window.scrollY >= scrollThreshold) {
+                window.location.href = "index.php";
+            }
+        }
+
+
+        textLoad();
+        setInterval(textLoad, 12000);
+        window.addEventListener("scroll", () => {
+            textLoad();
+        });
+    </script>
+</body>
+
+</html>
